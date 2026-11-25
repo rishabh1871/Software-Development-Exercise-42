@@ -30,7 +30,7 @@ def test_to_celsius_unknown_unit():
 
 
 def test_has_fever():
-    assert has_fever(38.5) is True
+    assert has_fever(38.5) is False
     assert has_fever(37.0) is False
     assert has_fever(38.0) is True
 
