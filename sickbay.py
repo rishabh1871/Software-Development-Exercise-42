@@ -63,7 +63,10 @@ def greet(query, patients):
 
 def ward_report(patients):
     average = average_temperature(list(patients.values()))
-    lines = [f"Patients: {len(patients)}", f"Average temperature: {round(average, 1)} °C"]
+    lines = [
+        f"Patients: {len(patients)}",
+        f"Average temperature: {round(average, 1)} °C",
+    ]
     for name in fever_patients(patients):
         lines.append(f"  FEVER: {name}")
     return "\n".join(lines)

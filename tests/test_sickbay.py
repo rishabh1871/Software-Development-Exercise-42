@@ -1,14 +1,13 @@
-
 import pytest
 
 from sickbay import (
-    to_celsius,
-    has_fever,
+    average_temperature,
     fever_patients,
     find_patient,
-    average_temperature,
-    pick_random,
     greet,
+    has_fever,
+    pick_random,
+    to_celsius,
     ward_report,
 )
 
@@ -74,9 +73,7 @@ def test_pick_random_empty():
 
 def test_greet():
     patients = {"Lt. Byte": 38.6}
-    assert greet("byte", patients) == (
-        "Quack, LT. BYTE! Dr. Honk will see you now."
-    )
+    assert greet("byte", patients) == ("Quack, LT. BYTE! Dr. Honk will see you now.")
 
 
 def test_greet_unknown_patient():
